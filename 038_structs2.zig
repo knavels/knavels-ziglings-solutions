@@ -41,7 +41,14 @@ pub fn main() void {
     //     experience 20
     //
     // Feel free to run this program without adding Zump. What does
-    // it do and why?
+    // it do and why? answer: garbage data, reading from undefined memory I assume
+
+    chars[1] = Character{
+        .role = Role.thief,
+        .gold = 10,
+        .health = 100,
+        .experience = 20,
+    };
 
     // Printing all RPG characters in a loop:
     for (chars, 0..) |c, num| {
